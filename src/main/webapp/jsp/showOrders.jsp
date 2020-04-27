@@ -9,26 +9,26 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>List of Customers</h1>
-	<c:forEach items="${customers}" var="customer">
-		<h2>${customer.cId} ${customer.cName}</h2>
+	<h1>List of Orders</h1>
+	<c:forEach items="${orders}" var="order">
+		<h2>${order.oId}</h2>
 		<table>
-			<h2>${customer.cName}'s Orders</h2>
 			<tr>
-				<th>Order ID</th>
 				<th>Quantity</th>
+				<th>Order Date</th>
+				<th>Customer ID</th>
+				<th>Customer Name</th>
 				<th>Product ID</th>
 				<th>Description</th>
 			</tr>
 			<tr>
-				<c:forEach items="${customer.orders}" var="order">
-					<tr>
-						<td>${order.oId}</td>
-						<td>${order.qty}</td>
-						<td>${order.prod.pId}</td>
-						<td>${order.prod.pDesc}</td>
-					</tr>
-				</c:forEach>
+			<tr>
+				<td>${order.qty}</td>
+				<td>${order.orderDate}</td>
+				<td>${order.cust.cId}</td>
+				<td>${order.cust.cName}</td>
+				<td>${order.prod.pId}</td>
+				<td>${order.prod.pDesc}</td>
 			</tr>
 		</table>
 	</c:forEach>

@@ -9,12 +9,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form:form modelAttribute="product">
-		Product Description: <form:input path="pDesc"></form:input>
-		<br><br>
-		Quantity in Stock: <form:input path="qtyInStock"></form:input>
-		<br><br>
-		<input type="submit" value="Add" />
+	<h1>New Order</h1>
+	<form:form modelAttribute="order">
+		Customer: <form:select path="cust" items="${customerMap}"></form:select>
+		Product: <form:select path="prod" items="${productMap}"></form:select>
+		Quantity: <form:input path="qty"></form:input>
+		<input type="submit" value="Order" />
 	</form:form>
 </body>
 </html>

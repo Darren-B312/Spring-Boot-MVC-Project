@@ -21,7 +21,6 @@ public class ProductController {
 	
 	@Autowired
 	ProductService ps;
-
 	@RequestMapping(value = "/showProducts.html", method=RequestMethod.GET)
 	public String listProductGET(Model m) {
 		ArrayList<Product> products = ps.getAllProducts();

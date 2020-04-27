@@ -17,4 +17,8 @@ public class CustomerService {
 	public ArrayList<Customer> getAllCustomers() {
 		return (ArrayList<Customer>) cr.findAll();
 	}
+	
+	public void save(Customer c) {
+		cr.save(c);
+	}
 }
