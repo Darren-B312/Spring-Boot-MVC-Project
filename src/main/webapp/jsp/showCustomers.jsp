@@ -32,5 +32,10 @@
 			</tr>
 		</table>
 	</c:forEach>
+	<a href="/index.html">Home</a>
+	<a href="/addCustomer.html">Add Customer</a>
+	<a href="/showProducts.html">List Products</a>
+	<a href="/showOrders.html">List Orders</a>
+	<a href="<c:url value="/logout"/>">Logout</a>
 </body>
 </html>

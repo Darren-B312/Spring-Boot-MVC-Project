@@ -11,9 +11,9 @@
 <body>
 	<h1>New Order</h1>
 	<form:form modelAttribute="order">
-		Customer: <form:select path="cust" items="${customerMap}"></form:select>
-		Product: <form:select path="prod" items="${productMap}"></form:select>
-		Quantity: <form:input path="qty"></form:input>
+		Customer: <form:select path="cust" items="${customerMap}"></form:select> <br>
+		Product: <form:select path="prod" items="${productMap}"></form:select><br>
+		Quantity: <form:input path="qty"></form:input><form:errors path = "qty"/><br>
 		<input type="submit" value="Order" />
 	</form:form>
 </body>

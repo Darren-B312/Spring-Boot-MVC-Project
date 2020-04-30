@@ -10,7 +10,6 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.Min;
-
 import org.hibernate.validator.constraints.NotBlank;
 
 @Entity
@@ -22,11 +21,11 @@ public class Product {
 	private Long pId;
 	
 	@Column(name="PDESC")
-	@NotBlank
+	@NotBlank(message = "may not be empty")
 	private String pDesc;
 	
 	@Column(name="QTYINSTOCK")
-	@Min(value=0)
+	@Min(value=0, message="must be greater than or equal to 0")
 	private int qtyInStock;
 	
 	@OneToMany(mappedBy="prod")

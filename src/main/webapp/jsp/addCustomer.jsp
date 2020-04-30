@@ -10,9 +10,13 @@
 </head>
 <body>
 	<form:form modelAttribute="customer">
-		Cust Name: <form:input path="cName"></form:input>
-		<br><br>
+		<h1>Add New Customer</h1>
+		Cust Name: <form:input path="cName"></form:input><form:errors path = "cName"/></br>
 		<input type="submit" value="Add" />
 	</form:form>
+	<a href="/index.html">Home</a>
+	<a href="/showOrders.html">List Orders</a>
+	<a href="/showProducts.html">List Products</a>
+
 </body>
 </html>

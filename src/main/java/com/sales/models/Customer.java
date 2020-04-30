@@ -21,7 +21,7 @@ public class Customer {
 	private Long cId;
 
 	@Column(name="CNAME")
-	@NotBlank
+	@NotBlank(message="may not be empty")
 	private String cName;
 	
 	@OneToMany(mappedBy="cust")
